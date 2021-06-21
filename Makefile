@@ -8,6 +8,8 @@ brain-games:
 publish:
 	npm publish --dry-run
 
+package-install:
+	npm link
 
 lint:
 	npx eslint .
@@ -15,5 +17,8 @@ lint:
 lint-fix:
 	npx eslint . --fix
 
+format:
+	npx prettier . --write
 
-.PHONY: install test lint
+
+.PHONY: install test lint format
