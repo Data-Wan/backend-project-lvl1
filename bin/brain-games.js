@@ -1,4 +1,4 @@
 #!/usr/bin/env node
-import { defaultGreetingAndReturnName } from "../index.js";
+import { defaultGreetingAndReturnName } from '../index.js';
 
 defaultGreetingAndReturnName();

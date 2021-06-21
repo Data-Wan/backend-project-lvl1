@@ -1,17 +1,16 @@
-import readlineSync from "readline-sync";
+import readlineSync from 'readline-sync';
 
-const startGameMessage = "Welcome to the Brain Games!\n";
-const askNameMessage = "May I have your name? ";
-const greetingMessage = "Hello, %s!";
+const startGameMessage = 'Welcome to the Brain Games!\n';
+const askNameMessage = 'May I have your name? ';
+const greetingMessage = 'Hello, %s!';
 
-const askQuestionMessage = "Question: ";
-const answerMessage = "Your answer: ";
-const winMessage = "Congratulations, %s!";
+const askQuestionMessage = 'Question: ';
+const answerMessage = 'Your answer: ';
+const winMessage = 'Congratulations, %s!';
 
-const rightAnswerMessage = "Correct!\n";
-const wrongAnswerMessage =
-  "'%s' is wrong answer ;(. Correct answer was '%s'.\n" +
-  "Let's try again, %s!";
+const rightAnswerMessage = 'Correct!\n';
+const wrongAnswerMessage = "'%s' is wrong answer ;(. Correct answer was '%s'.\n"
+  + "Let's try again, %s!";
 
 // Utils, no export
 function printLoseMessage(name, rightAnswer, userAnswer) {
@@ -51,6 +50,10 @@ export function startSpecificGame(rules, predicate, numberOfRounds) {
 
 export function getAnswer(questionVar) {
   return readlineSync.question(
-    `${askQuestionMessage}${questionVar}\n${answerMessage}`
+    `${askQuestionMessage}${questionVar}\n${answerMessage}`,
   );
+}
+
+export function getRandomInt(max) {
+  return Math.floor(Math.random() * max);
 }

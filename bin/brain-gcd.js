@@ -1,4 +1,4 @@
-import { getAnswer, startSpecificGame } from "../index.js";
+import { getAnswer, startSpecificGame } from '../index.js';
 
 function getRandomInt(max) {
   return Math.floor(Math.random() * max);
@@ -24,13 +24,17 @@ function gamePredicateFunction() {
   const number1 = getRandomInt(max);
   const number2 = getRandomInt(max);
 
-  const userAnswer = Number.parseInt(getAnswer(`${number1} ${number2}`), 10);
+  const userAnswer = getAnswer(`${number1} ${number2}`);
   const rightAnswer = gcd(number1, number2);
 
-  return [rightAnswer === userAnswer, rightAnswer, userAnswer];
+  return [
+    rightAnswer === Number.parseInt(userAnswer, 10),
+    rightAnswer,
+    userAnswer,
+  ];
 }
 
-const gameRules = "Find the greatest common divisor of given numbers.\n";
+const gameRules = 'Find the greatest common divisor of given numbers.\n';
 const numberOfRounds = 3;
 
 startSpecificGame(gameRules, gamePredicateFunction, numberOfRounds);

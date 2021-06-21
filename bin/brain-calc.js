@@ -1,8 +1,4 @@
-import { getAnswer, startSpecificGame } from "../index.js";
-
-function getRandomInt(max) {
-  return Math.floor(Math.random() * max);
-}
+import { getAnswer, getRandomInt, startSpecificGame } from '../index.js';
 
 function sum(a, b) {
   return a + b;
@@ -51,16 +47,17 @@ function gamePredicateFunction() {
 
   const [operationFunc, operationText] = getRandomOperation();
 
-  const userAnswer = Number.parseInt(
-    getAnswer(operationText(number1, number2)),
-    10
-  );
+  const userAnswer = getAnswer(operationText(number1, number2));
   const rightAnswer = operationFunc(number1, number2);
 
-  return [rightAnswer === userAnswer, rightAnswer, userAnswer];
+  return [
+    rightAnswer === Number.parseInt(userAnswer, 10),
+    rightAnswer,
+    userAnswer,
+  ];
 }
 
-const gameRules = "What is the result of the expression?\n";
+const gameRules = 'What is the result of the expression?\n';
 const numberOfRounds = 3;
 
 startSpecificGame(gameRules, gamePredicateFunction, numberOfRounds);
