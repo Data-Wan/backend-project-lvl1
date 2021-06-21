@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { getAnswer, getRandomInt, startSpecificGame } from '../index.js';
 
 function isPrime(num) {

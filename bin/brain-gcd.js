@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { getAnswer, startSpecificGame } from '../index.js';
 
 function getRandomInt(max) {
