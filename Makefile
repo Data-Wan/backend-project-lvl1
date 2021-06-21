@@ -11,3 +11,6 @@ publish:
 
 lint:
 	npx eslint .
+
+
+.PHONY: install test lint
