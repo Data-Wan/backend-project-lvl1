@@ -18,7 +18,6 @@ For start input game-name from description.
 
 <a href="https://asciinema.org/a/ei5CWYQFZNccZRkogrDgkUHjA">asciinema brain-gcd example</a>
 
-
 <a href="https://asciinema.org/a/dt8mJ2Pw1tVXINRSq7NuUmDig">asciinema brain-progression example</a>
 
 <a href="https://asciinema.org/a/wC2lpKB0EjRi4OzO11RV#OouTx">asciinema brain-prime example
